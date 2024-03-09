@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+struct Pieza {
+    std::string tipo;
+    int x;
+    int y;
+};
+
+std::vector<Pieza> tablero;
+
+void inicializarTablero() {
+    // Implementar la inicialización del tablero con las piezas en su posición inicial
+}
+
+void mostrarTablero() {
+    // Implementar la función para mostrar el tablero con las piezas actuales
+}
+
+bool validarMovimiento(int x_origen, int y_origen, int x_destino, int y_destino) {
+    // Implementar la lógica para validar si un movimiento es legal
+    return true; // Temporalmente siempre devuelve true
+}
+
+bool verificarJaqueMate() {
+    // Implementar la verificación de jaque mate
+    return false; // Temporalmente siempre devuelve false
+}
+
+int main() {
+    bool jaque_mate = false;
+    
+    inicializarTablero();
+    
+    while (!jaque_mate) {
+        mostrarTablero();
+        
+        // Lógica para que los jugadores realicen sus movimientos
+        
+        if (verificarJaqueMate()) {
+            jaque_mate = true;
+            std::cout << "¡Jaque mate! Fin de la partida." << std::endl;
+        }
+        
+        // Otras condiciones de finalización de la partida
+        
+        // Lógica para cambiar de jugador
+    }
+    
+    return 0;
+}
